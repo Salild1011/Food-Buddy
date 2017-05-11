@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.codestar.foodbuddy.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/slider_height" />
+
+        <TextView
+            android:id="@+id/welcome_text_view"
+            android:text="@string/welcome_message"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/title_text_size"
+            android:gravity="center"
+            android:padding="@dimen/padding_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/popular_tags_recycler_view"
+            android:paddingLeft="@dimen/recycler_padding_horizontal"
+            android:paddingRight="@dimen/recycler_padding_horizontal"
+            android:paddingTop="@dimen/recycler_padding_vertical"
+            android:paddingBottom="@dimen/recycler_padding_vertical"
+            android:layout_marginBottom="@dimen/recycler_margin_bottom"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

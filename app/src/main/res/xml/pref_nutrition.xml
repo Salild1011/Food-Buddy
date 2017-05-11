@@ -1,0 +1,26 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_category_diet"
+        android:key="@string/pref_name">
+
+        <ListPreference
+            android:key="@string/pref_category_diet"
+            android:title="@string/pref_category_diet"
+            android:entries="@array/category_diet_entries"
+            android:entryValues="@array/category_diet_values"
+            android:defaultValue="@string/category_diet_default"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_category_health"
+        android:key="@string/pref_name">
+
+        <ListPreference
+            android:key="@string/pref_category_health"
+            android:title="@string/pref_category_health"
+            android:entries="@array/category_health_entries"
+            android:entryValues="@array/category_health_values"
+            android:defaultValue="@string/category_health_default"/>
+    </PreferenceCategory>
+</PreferenceScreen>

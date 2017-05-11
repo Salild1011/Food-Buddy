@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "926720265880",
+    "firebase_url": "https://food-buddy-ffc74.firebaseio.com",
+    "project_id": "food-buddy-ffc74",
+    "storage_bucket": "food-buddy-ffc74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926720265880:android:f52ac5552b11377f",
+        "android_client_info": {
+          "package_name": "in.codestar.foodbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926720265880-1ln222q0dcltneh5m712nimm22ru8q4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv-7XXd96Ty9qU9O47BERGrqyDBPa1--M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
