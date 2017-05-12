@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.codestar.foodbuddy.adapter.NutritionAdapter;
+import in.codestar.foodbuddy.analytics.FoodBuddyAnalytics;
 import in.codestar.foodbuddy.util.Utility;
 import in.codestar.foodbuddy.database.RecipeContract.RecipeEntry;
 import in.codestar.foodbuddy.widget.RecipeWidgetProvider;
@@ -59,7 +60,6 @@ public class RecipeActivity extends AppCompatActivity {
     @BindView(R.id.pin_recipe_button) ToggleButton mPinRecipeButton;
 
     private InterstitialAd mInterstitialAd;
-
 
     // data
     private final String LOG_TAG = getClass().getSimpleName();
@@ -211,7 +211,8 @@ public class RecipeActivity extends AppCompatActivity {
         }
 
         // Initialize analytics
-        mTracker = getDefaultTracker();
+        FoodBuddyAnalytics analytics = (FoodBuddyAnalytics) getApplication();
+        mTracker = analytics.getDefaultTracker();
     }
 
     private void viewRecipe(String url) {
@@ -225,14 +226,6 @@ public class RecipeActivity extends AppCompatActivity {
                 .build();
 
         mInterstitialAd.loadAd(adRequest);
-    }
-
-    synchronized Tracker getDefaultTracker() {
-        if (mTracker == null) {
-            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
-            mTracker = analytics.newTracker(R.xml.app_tracker);
-        }
-        return mTracker;
     }
 
     @Override
@@ -292,6 +285,7 @@ public class RecipeActivity extends AppCompatActivity {
 
                 Toast.makeText(RecipeActivity.this, getString(R.string.pin_add_success), Toast.LENGTH_SHORT).show();
                 mPinned = true;
+                mPinRecipeButton.setContentDescription(getString(R.string.pin_on_content_description));
 
                 mTracker.send(new HitBuilders.EventBuilder()
                         .setCategory("Action")
@@ -305,6 +299,7 @@ public class RecipeActivity extends AppCompatActivity {
 
                 Toast.makeText(RecipeActivity.this, getString(R.string.pin_remove_success), Toast.LENGTH_SHORT).show();
                 mPinned = false;
+                mPinRecipeButton.setContentDescription(getString(R.string.pin_off_content_description));
 
                 mTracker.send(new HitBuilders.EventBuilder()
                         .setCategory("Action")

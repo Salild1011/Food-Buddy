@@ -46,6 +46,7 @@ import javax.net.ssl.HttpsURLConnection;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.codestar.foodbuddy.adapter.SectionAdapter;
+import in.codestar.foodbuddy.analytics.FoodBuddyAnalytics;
 import in.codestar.foodbuddy.database.RecipeContract;
 import in.codestar.foodbuddy.loader.DataAsyncLoader;
 import in.codestar.foodbuddy.model.CardItemModel;
@@ -114,15 +115,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
         // Initialize analytics
-        mTracker = getDefaultTracker();
-    }
-
-    private synchronized Tracker getDefaultTracker() {
-        if (mTracker == null) {
-            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
-            mTracker = analytics.newTracker(R.xml.app_tracker);
-        }
-        return mTracker;
+        FoodBuddyAnalytics analytics = (FoodBuddyAnalytics) getApplication();
+        mTracker = analytics.getDefaultTracker();
     }
 
     @Override

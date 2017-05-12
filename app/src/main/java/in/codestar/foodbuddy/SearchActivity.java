@@ -158,10 +158,6 @@ public class SearchActivity extends AppCompatActivity {
                     Toast.makeText(SearchActivity.this, getString(R.string.error_loading_data),
                             Toast.LENGTH_SHORT).show();
                 }
-//                else if (itemModels.size() == 0) {
-//                    Toast.makeText(SearchActivity.this, getString(R.string.no_result_data),
-//                            Toast.LENGTH_SHORT).show();
-//                }
                 else {
                     mSearchAdapter.updateData(itemModels);
                 }

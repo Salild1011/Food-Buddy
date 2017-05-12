@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'key_foodbuddy'
             keyPassword 'foodbuddyalias'
-            storeFile file('/Users/salil/AndroidStudioProjects/foodbuddy_keystore/foodbuddy_keystore.jks')
+            storeFile file("$rootDir/foodbuddy_keystore/foodbuddy_keystore.jks")
             storePassword 'foodbuddy1234'
         }
     }

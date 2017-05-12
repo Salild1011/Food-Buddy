@@ -16,6 +16,7 @@
     <string name="about_message">developed by Salil Deshpande\n\nApp Icon developed from
         https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html</string>
     <string name="dialog_positive">OK</string>
+    <string name="fab_search_desc">Button to initiate recipe search</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_name">foodbuddy_prefs</string>
@@ -68,8 +69,8 @@
     <string name="nutritional_values">Nutritional Values</string>
     <string name="view_recipe_button">Click Here</string>
     <string name="view_recipe_text">to view entire recipe</string>
-    <string name="pin_off_content_description">Recipe is not pinned</string>
-    <string name="pin_on_content_description">Recipe is pinned</string>
+    <string name="pin_off_content_description">Toggle Button: Recipe is not pinned</string>
+    <string name="pin_on_content_description">Toggle Button: Recipe is pinned</string>
     <string name="pin_add_success">Recipe successfully pinned</string>
     <string name="pin_remove_success">Recipe successfully unpinned</string>
     <string name="energy">Energy(Kcal)</string>
